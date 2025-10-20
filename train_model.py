@@ -5,8 +5,10 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 import os
+import sklearn
 
 print("🚀 Starting model training...\n")
+print(f"📦 scikit-learn version: {sklearn.__version__}\n")
 
 # Create models folder if not exists
 if not os.path.exists('models'):
@@ -49,9 +51,16 @@ X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 print("✅ Scaling complete\n")
 
-# Train model
+# Train model with explicit parameters
 print("🤖 Training Random Forest model...")
-model = RandomForestClassifier(n_estimators=100, random_state=42)
+model = RandomForestClassifier(
+    n_estimators=100,
+    random_state=42,
+    max_depth=10,
+    min_samples_split=10,
+    min_samples_leaf=4,
+    n_jobs=-1
+)
 model.fit(X_train_scaled, y_train)
 print("✅ Model training complete\n")
 
@@ -61,12 +70,23 @@ y_pred = model.predict(X_test_scaled)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"🎯 Model Accuracy: {accuracy*100:.2f}%\n")
 
-# Save model and scaler
+# Save model and scaler with protocol 4 (better compatibility)
 print("💾 Saving model and scaler...")
-joblib.dump(model, 'models/trained_model.pkl')
-joblib.dump(scaler, 'models/scaler.pkl')
+joblib.dump(model, 'models/trained_model.pkl', protocol=4)
+joblib.dump(scaler, 'models/scaler.pkl', protocol=4)
+
+# Save metadata
+metadata = {
+    'sklearn_version': sklearn.__version__,
+    'accuracy': accuracy,
+    'n_features': X.shape[1],
+    'feature_names': list(X.columns)
+}
+joblib.dump(metadata, 'models/metadata.pkl', protocol=4)
+
 print("✅ Model saved: models/trained_model.pkl")
-print("✅ Scaler saved: models/scaler.pkl\n")
+print("✅ Scaler saved: models/scaler.pkl")
+print("✅ Metadata saved: models/metadata.pkl\n")
 
 # Test saved model
 print("🔍 Testing saved model...")
@@ -81,4 +101,5 @@ print(f"✅ Model test successful!")
 print(f"   Test prediction: {'Diabetic' if test_pred[0] == 1 else 'Non-Diabetic'}\n")
 
 print("🎉 ALL DONE! Model ready for Streamlit app!")
-print("\nRun: streamlit run app.py")
+print(f"\n📌 Model trained with scikit-learn {sklearn.__version__}")
+print("Run: streamlit run app.py")
