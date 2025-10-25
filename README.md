@@ -2,14 +2,13 @@
 
 **Machine Learning Capstone Project**  
 **ECSP5004 - Machine Learning Lab**  
-**Group ID:** [Your ID] | **Section:** V_A/V_B
+**Group ID:** [Your ID] | **Section:** V_A
 
 ---
 
 ## 👥 Team Members
-- **Mayank Ninawe** - [Roll No] - [Email]
-- **[Member 2]** - [Roll No] - [Email]
-- **[Member 3]** - [Roll No] - [Email]
+- **Mayank Ninawe** - A3-39 - ninawemh@rknec.edu
+- **Mahimna Bhuse** - A3-38 - bhusems@rknec.edu
 
 ---
 
@@ -67,7 +66,7 @@ diabetes-prediction-ml/
 
 ### Step 1: Clone Repository
 ```
-git clone [your-repo-url]
+git clone https://github.com/Mayank-Ninawe/diabetes-prediction-ml.git
 cd diabetes-prediction-ml
 ```
 
@@ -103,7 +102,7 @@ streamlit run src/app.py
 ---
 
 ## 🌐 Deployment
-**Live Demo:** [Your Streamlit Cloud URL]
+**Live Demo:** https://diabetes-prediction-ml-proj.streamlit.app/
 
 Deployed on Streamlit Cloud for 24/7 accessibility from any device.
 
@@ -147,11 +146,11 @@ MIT License - Academic Project
 ---
 
 ## 📧 Contact
-For queries, contact: [your-email]
+For queries, contact: ninawemh@rknec.edu
 
 ---
 
-**Submitted to:** [Professor Name]  
-**Department:** Electronics Engineering  
+**Submitted to:** Prof.Vikas Gupta  
+**Department:** Electronics and Computer Science  
 **Institution:** RCOEM, Nagpur  
-**Date:** October 2025" 
+**Date:** 27 October 2025" 
