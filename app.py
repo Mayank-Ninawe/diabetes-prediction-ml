@@ -536,7 +536,7 @@ st.sidebar.markdown("""
 
 st.sidebar.markdown("""
 <div class="info-box">
-    <p><strong>Developed By:</strong> Mayank Ninawe</p>
+    <p><strong>Developed By:</strong> Mayank Ninawe and Mahimna Bhuse</p>
     <p><strong>Accuracy:</strong> <span style="color: #4cc9f0;">~77%</span> based on clinical data</p>
     <p><strong>Purpose:</strong> Early diabetes risk screening</p>
     <div style="height: 1px; background: linear-gradient(to right, #3a86ff, transparent); margin: 10px 0;"></div>
@@ -927,7 +927,7 @@ st.markdown('<div class="spacer"></div>', unsafe_allow_html=True)
 st.markdown("""
 <div class="footer">
     <p><strong>🩺 Diabetes Prediction System</strong></p>
-    <p>Developed by Mayank Ninawe | ML Capstone Project 2025</p>
+    <p>Developed by Mayank Ninawe and Mahimna Bhuse| ML Capstone Project 2025</p>
     <div style="width: 150px; height: 1px; background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent); margin: 10px auto;"></div>
     <p style="color: #b0b0b0; font-size: 0.8rem; margin-top: 0.5rem;">
         <em>⚠️ This tool is for screening purposes only and not a substitute for professional medical diagnosis.</em>
