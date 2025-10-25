@@ -1,315 +1,159 @@
-# 🩺 Diabetes Prediction System"# 🩺 Diabetes Prediction System
+"# 🩺 Diabetes Prediction System
 
-
-
-**Machine Learning Capstone Project**  **Machine Learning Capstone Project**  
-
-Course: ECSP5004 - Machine Learning Lab  **ECSP5004 - Machine Learning Lab**  
-
-Group ID: [Fill your Group ID] | Section: V_A  **Group ID:** [Your ID] | **Section:** V_A
-
+**Machine Learning Capstone Project**  
+Course: ECSP5004 - Machine Learning Lab  
+Group ID: [Fill your Group ID] | Section: V_A  
 Institution: RCOEM, Nagpur | Semester: Odd 2024-25
-
----
 
 ---
 
 ## 👥 Team Members
 
-## 👥 Team Members- **Mayank Ninawe** - A-39 - ninawemh@rknec.edu
-
-- **Mahimna Bhuse** - A-38 - bhusems@rknec.edu
-
 | Name            | Roll Number | Email               | Contribution |
-
-|-----------------|-------------|---------------------|--------------|---
-
+|-----------------|-------------|---------------------|--------------|
 | Mayank Ninawe   | A3-39       | ninawemh@rknec.edu  | 50%          |
+| Mahimna Bhuse   | A3-38       | bhusems@rknec.edu   | 50%          |
 
-| Mahimna Bhuse   | A3-38       | bhusems@rknec.edu   | 50%          |## 📌 Project Overview
+---
 
+## 📌 Project Overview
 
+A machine learning-based diabetes prediction system using **Random Forest Classifier** to predict diabetes risk from patient health parameters with **77% accuracy**. The system features an interactive **Streamlit web application** for real-time predictions and comprehensive data analysis through Jupyter notebooks.
 
----A machine learning-based diabetes prediction system that uses patient health parameters 
+**Keywords:** Diabetes Prediction, Random Forest, Healthcare ML, Classification, Streamlit Deployment
 
-to predict diabetes risk with ~77% accuracy. Built using Random Forest Classifier 
+---
 
-## 📌 Project Overviewand deployed as an interactive web application.
+## 🎯 Objectives
 
-
-
-A machine learning-based diabetes prediction system using **Random Forest Classifier** to predict diabetes risk from patient health parameters with **77% accuracy**. The system features an interactive **Streamlit web application** for real-time predictions and comprehensive data analysis through Jupyter notebooks.---
-
-
-
-**Keywords:** Diabetes Prediction, Random Forest, Healthcare ML, Classification, Streamlit Deployment## 🎯 Objectives
-
-1. Develop accurate diabetes prediction model
-
----2. Create user-friendly GUI for healthcare professionals
-
-3. Deploy system for real-world accessibility
-
-## 🎯 Objectives4. Demonstrate complete ML pipeline
-
-
-
-- Develop accurate diabetes prediction model using ML techniques---
-
+- Develop accurate diabetes prediction model using ML techniques
 - Handle missing data and perform feature engineering
+- Create user-friendly GUI for healthcare professionals
+- Deploy cloud-based system for real-world accessibility
+- Demonstrate complete end-to-end ML pipeline
 
-- Create user-friendly GUI for healthcare professionals## 📊 Dataset
+---
 
-- Deploy cloud-based system for real-world accessibility- **Source:** Pima Indians Diabetes Database (Kaggle)
+## 📊 Dataset Information
 
-- Demonstrate complete end-to-end ML pipeline- **Samples:** 768 patients
+- **Source:** Pima Indians Diabetes Database (Kaggle)
+- **Samples:** 768 female patients of Pima Indian heritage
+- **Features:** 8 health parameters (Pregnancies, Glucose, BP, Skin Thickness, Insulin, BMI, Diabetes Pedigree Function, Age)
+- **Target:** Binary classification (0 = No Diabetes, 1 = Diabetes)
+- **Class Distribution:** 500 non-diabetic (65%), 268 diabetic (35%)
+- **Train-Test Split:** 80-20 stratified split
 
-- **Features:** 8 health parameters
+---
 
----- **Target:** Diabetes outcome (0/1)
+## 🔧 Tech Stack
 
-
-
-## 📊 Dataset Information---
-
-
-
-- **Source:** Pima Indians Diabetes Database (Kaggle)## 🔧 Tech Stack
-
-- **Samples:** 768 female patients of Pima Indian heritage- **Language:** Python 3.9+
-
-- **Features:** 8 health parameters (Pregnancies, Glucose, BP, Skin Thickness, Insulin, BMI, Diabetes Pedigree Function, Age)- **ML Library:** Scikit-learn
-
-- **Target:** Binary classification (0 = No Diabetes, 1 = Diabetes)- **GUI Framework:** Streamlit
-
-- **Class Distribution:** 500 non-diabetic (65%), 268 diabetic (35%)- **Visualization:** Matplotlib, Seaborn
-
-- **Train-Test Split:** 80-20 stratified split- **Development:** Jupyter Notebook, Git
-
-
-
-------
-
-
-
-## 🔧 Tech Stack## 📁 Project Structure
-
-```
-
-| Category        | Technologies                  |diabetes-prediction-ml/
-
-|-----------------|-------------------------------|├── notebooks/ # Jupyter notebooks
-
-| Language        | Python 3.11                   |├── data/ # Dataset files
-
-| ML Framework    | Scikit-learn 1.3.2            |├── models/ # Trained models
-
-| Web Framework   | Streamlit 1.39.0              |├── src/ # Source code
-
-| Data Processing | Pandas, NumPy                 |├── screenshots/ # GUI screenshots
-
-| Visualization   | Matplotlib, Seaborn           |└── docs/ # Documentation
-
-| Development     | Jupyter Notebook, Git, GitHub |```
-
+| Category        | Technologies                  |
+|-----------------|-------------------------------|
+| Language        | Python 3.11                   |
+| ML Framework    | Scikit-learn 1.3.2            |
+| Web Framework   | Streamlit 1.39.0              |
+| Data Processing | Pandas, NumPy                 |
+| Visualization   | Matplotlib, Seaborn           |
+| Development     | Jupyter Notebook, Git, GitHub |
 | Deployment      | Streamlit Cloud               |
 
 ---
+
+## 📁 Repository Structure
+
+```
+diabetes-prediction-ml/
+│
+├── data/
+│   ├── diabetes.csv              # Pima Indians Diabetes Dataset
+│   └── data_source.txt           # Dataset source and citation
+│
+├── models/
+│   ├── trained_model.pkl         # Random Forest model (sklearn 1.3.2)
+│   ├── scaler.pkl                # StandardScaler object
+│   └── metadata.pkl              # Model metadata (version, accuracy)
+│
+├── notebooks/
+│   └── diabetes_model_training.ipynb  # Complete ML pipeline notebook
+│
+├── src/
+│   ├── app.py                    # Streamlit web application
+│   └── train_model.py            # Model training script
+│
+├── screenshots/                  # Application screenshots for report
+│   ├── 01_home_interface.png
+│   ├── 02_healthy_prediction.png
+│   ├── 03_diabetic_prediction.png
+│   └── 04_notebook_results.png
+│
+├── requirements.txt              # Python dependencies
+├── README.md                     # This file
+└── .gitignore                   # Git ignore rules
+```
 
 ---
 
 ## 🚀 Installation & Setup
 
-## 📁 Repository Structure
-
 ### Prerequisites
-
-```- Python 3.9 or higher
-
-diabetes-prediction-ml/- pip package manager
-
-│
-
-├── data/### Step 1: Clone Repository
-
-│   ├── diabetes.csv              # Pima Indians Diabetes Dataset```
-
-│   └── data_source.txt           # Dataset source and citationgit clone https://github.com/Mayank-Ninawe/diabetes-prediction-ml.git
-
-│cd diabetes-prediction-ml
-
-├── models/```
-
-│   ├── trained_model.pkl         # Random Forest model (sklearn 1.3.2)
-
-│   ├── scaler.pkl                # StandardScaler object### Step 2: Install Dependencies
-
-│   └── metadata.pkl              # Model metadata (version, accuracy)```
-
-│pip install -r requirements.txt
-
-├── notebooks/```
-
-│   └── diabetes_model_training.ipynb  # Complete ML pipeline notebook
-
-│### Step 3: Run Jupyter Notebook (Training)
-
-├── src/```
-
-│   ├── app.py                    # Streamlit web applicationjupyter notebook
-
-│   └── train_model.py            # Model training script```
-
-│
-
-├── screenshots/                  # Application screenshots for reportOpen: notebooks/diabetes_model_training.ipynb
-
-│   ├── 01_home_interface.pngRun all cells
-
-│   ├── 02_healthy_prediction.png
-
-│   ├── 03_diabetic_prediction.png### Step 4: Run Streamlit App
-
-│   └── 04_notebook_results.png```
-
-│streamlit run src/app.py
-
-├── requirements.txt              # Python dependencies```
-
-├── README.md                     # This file
-
-└── .gitignore                   # Git ignore rules**App will open at:** `http://localhost:8501`
-
-```
-
----
-
----
-
-## 📈 Model Performance
-
-## 🚀 Installation & Setup- **Algorithm:** Random Forest Classifier
-
-- **Accuracy:** 77.27%
-
-### Prerequisites- **Precision:** 0.73 (Diabetic class)
-
-- Python 3.11 or higher- **Recall:** 0.69 (Diabetic class)
-
-- pip package manager- **AUC Score:** 0.83
-
+- Python 3.11 or higher
+- pip package manager
 - Git (for cloning)
-
----
 
 ### Quick Start
 
-## 🌐 Deployment
-
-```bash**Live Demo:** (https://diabetes-prediction-ml-proj.streamlit.app/)
-
+```bash
 # 1. Clone Repository
-
-git clone https://github.com/Mayank-Ninawe/diabetes-prediction-ml.gitDeployed on Streamlit Cloud for 24/7 accessibility from any device.
-
+git clone https://github.com/Mayank-Ninawe/diabetes-prediction-ml.git
 cd diabetes-prediction-ml
 
----
-
 # 2. Install Dependencies
+pip install -r requirements.txt
 
-pip install -r requirements.txt## 🧪 Testing
-
-All test cases passed:
-
-# 3. Run Jupyter Notebook (Optional - for training)- ✅ Data preprocessing
-
-cd notebooks- ✅ Model training
-
-jupyter notebook diabetes_model_training.ipynb- ✅ Prediction accuracy
-
-# Run all cells to train model- ✅ GUI functionality
-
-- ✅ Edge cases handling
+# 3. Run Jupyter Notebook (Optional - for training)
+cd notebooks
+jupyter notebook diabetes_model_training.ipynb
+# Run all cells to train model
 
 # 4. Run Streamlit Application
-
-cd ..---
-
+cd ..
 streamlit run src/app.py
-
-```## 📸 Screenshots
-
-See `screenshots/` folder for GUI images.
+```
 
 App will open at: http://localhost:8501
 
 ---
 
----
+## 📈 Model Performance
 
-## 🔮 Future Enhancements
-
-## 📈 Model Performance1. Mobile app development
-
-2. Integration with hospital management systems
-
-| Metric                | Value  | Description                      |3. Real-time patient monitoring
-
-|-----------------------|--------|----------------------------------|4. Multi-disease prediction
-
-| Accuracy              | 77.27% | Overall correct predictions      |5. Explainable AI dashboard
-
+| Metric                | Value  | Description                      |
+|-----------------------|--------|----------------------------------|
+| Accuracy              | 77.27% | Overall correct predictions      |
 | Precision (Diabetic)  | 0.73   | True positives / (TP + FP)      |
-
-| Recall (Diabetic)     | 0.69   | True positives / (TP + FN)      |---
-
+| Recall (Diabetic)     | 0.69   | True positives / (TP + FN)      |
 | F1-Score (Diabetic)   | 0.71   | Harmonic mean of precision & recall |
+| AUC-ROC               | 0.83   | Area under ROC curve            |
 
-| AUC-ROC               | 0.83   | Area under ROC curve            |## 📚 References
-
-1. Pima Indians Diabetes Database - UCI ML Repository
-
-**Algorithm Details:**2. Scikit-learn Documentation
-
-- **Model:** Random Forest Classifier3. Streamlit Documentation
-
-- **Parameters:** n_estimators=100, max_depth=10, min_samples_split=104. Research papers (listed in report)
-
+**Algorithm Details:**
+- **Model:** Random Forest Classifier
+- **Parameters:** n_estimators=100, max_depth=10, min_samples_split=10
 - **Training Time:** ~2-3 seconds
+- **Inference Time:** <2 seconds per prediction
 
-- **Inference Time:** <2 seconds per prediction---
-
-
-
-**Feature Importance:**## 📄 License
-
-- Glucose (42%) - Most predictive featureMIT License - Academic Project
-
+**Feature Importance:**
+- Glucose (42%) - Most predictive feature
 - BMI (18%) - Second most important
-
-- Age (12%) - Third most important---
-
+- Age (12%) - Third most important
 - Other features (28%)
 
-## 📧 Contact
+---
 
----For queries, contact: ninawemh@rknec.edu
+## 🧪 Testing & Validation
 
-
-
-## 🧪 Testing & Validation---
-
-
-
-**Test Cases Passed:****Submitted to:** Prof.Vikas Gupta  
-
-- ✅ Data preprocessing and missing value handling**Department:** Electronics and Computer Science 
-
-- ✅ Model training with fixed random seed (reproducible)**Institution:** RCOEM, Nagpur  
-
-- ✅ Prediction accuracy on test set**Date:** 27 October 2025" 
-
+**Test Cases Passed:**
+- ✅ Data preprocessing and missing value handling
+- ✅ Model training with fixed random seed (reproducible)
+- ✅ Prediction accuracy on test set
 - ✅ GUI functionality and user interactions
 - ✅ Edge cases (boundary values, invalid inputs)
 - ✅ Cross-validation results consistent
@@ -460,4 +304,4 @@ This is a prediction tool developed for educational purposes. It should NOT be u
 
 **Project Status:** ✅ Complete & Deployed  
 **Version:** 1.0  
-**Last Updated:** October 25, 2025
+**Last Updated:** October 25, 2025" 
