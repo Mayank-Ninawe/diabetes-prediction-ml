@@ -2,7 +2,7 @@
 
 **Machine Learning Capstone Project**  
 **ECSP5004 - Machine Learning Lab**  
-**Group ID:** [Your ID] | **Section:** V_A/V_B
+**Group ID:** [Your ID] | **Section:** V_A
 
 ---
 
@@ -66,7 +66,7 @@ diabetes-prediction-ml/
 
 ### Step 1: Clone Repository
 ```
-git clone [your-repo-url]
+git clone https://github.com/Mayank-Ninawe/diabetes-prediction-ml.git
 cd diabetes-prediction-ml
 ```
 
