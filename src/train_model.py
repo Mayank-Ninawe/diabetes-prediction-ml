@@ -11,13 +11,13 @@ print("🚀 Starting model training...\n")
 print(f"📦 scikit-learn version: {sklearn.__version__}\n")
 
 # Create models folder if not exists
-if not os.path.exists('models'):
-    os.makedirs('models')
+if not os.path.exists('../models'):
+    os.makedirs('../models')
     print("✅ Created 'models' folder\n")
 
 # Load dataset
 print("📂 Loading dataset...")
-df = pd.read_csv('data/diabetes.csv')
+df = pd.read_csv('../data/diabetes.csv')
 print(f"✅ Dataset loaded: {df.shape}\n")
 
 # Handle missing values (zeros)
@@ -70,11 +70,6 @@ y_pred = model.predict(X_test_scaled)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"🎯 Model Accuracy: {accuracy*100:.2f}%\n")
 
-# Save model and scaler with protocol 4 (better compatibility)
-print("💾 Saving model and scaler...")
-joblib.dump(model, 'models/trained_model.pkl', protocol=4)
-joblib.dump(scaler, 'models/scaler.pkl', protocol=4)
-
 # Save metadata
 metadata = {
     'sklearn_version': sklearn.__version__,
@@ -82,16 +77,20 @@ metadata = {
     'n_features': X.shape[1],
     'feature_names': list(X.columns)
 }
-joblib.dump(metadata, 'models/metadata.pkl', protocol=4)
 
+# Save model and scaler with protocol 4 (better compatibility)
+print("💾 Saving model and scaler...")
+joblib.dump(model, '../models/trained_model.pkl')
+joblib.dump(scaler, '../models/scaler.pkl')
+joblib.dump(metadata, '../models/metadata.pkl')
 print("✅ Model saved: models/trained_model.pkl")
 print("✅ Scaler saved: models/scaler.pkl")
 print("✅ Metadata saved: models/metadata.pkl\n")
 
 # Test saved model
 print("🔍 Testing saved model...")
-loaded_model = joblib.load('models/trained_model.pkl')
-loaded_scaler = joblib.load('models/scaler.pkl')
+loaded_model = joblib.load('../models/trained_model.pkl')
+loaded_scaler = joblib.load('../models/scaler.pkl')
 
 test_sample = [[2, 100, 70, 20, 80, 23.5, 0.4, 25]]
 test_scaled = loaded_scaler.transform(test_sample)

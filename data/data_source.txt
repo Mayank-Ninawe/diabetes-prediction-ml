@@ -1,0 +1,20 @@
+Dataset: Pima Indians Diabetes Database
+
+Source: Kaggle
+URL: https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database
+
+Description:
+- 768 samples
+- 8 features (Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age)
+- 1 target (Outcome: 0=No Diabetes, 1=Diabetes)
+- Class distribution: 500 non-diabetic (65%), 268 diabetic (35%)
+
+Citation:
+Smith, J.W., Everhart, J.E., Dickson, W.C., Knowler, W.C., & Johannes, R.S. (1988). 
+Using the ADAP learning algorithm to forecast the onset of diabetes mellitus. 
+In Proceedings of the Symposium on Computer Applications and Medical Care (pp. 261--265). 
+IEEE Computer Society Press.
+
+Original Source: National Institute of Diabetes and Digestive and Kidney Diseases
+License: CC0 - Public Domain
+Downloaded: October 2025
