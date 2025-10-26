@@ -2,7 +2,7 @@
 
 **Machine Learning Capstone Project**  
 Course: ECSP5004 - Machine Learning Lab  
-Group ID: [Fill your Group ID] | Section: V_A  
+Group ID: 2 | Section: V_A  
 Institution: RCOEM, Nagpur | Semester: Odd 2024-25
 
 ---
